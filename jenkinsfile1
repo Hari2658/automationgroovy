@@ -1,5 +1,4 @@
-pipeline
-{pipeline 
+pipeline 
 {
     agent any
     stages
@@ -40,7 +39,7 @@ pipeline
                 }
             }
         }
-         stage('ContinuousDeployment')
+        stage('ContinuousDeployment')
        {
          steps
             {
@@ -58,7 +57,7 @@ pipeline
                 }
             }
         }
-         stage('ContinuousTesting')
+        stage('ContinuousTesting')
        {
          steps
             {
@@ -66,8 +65,8 @@ pipeline
                {
                    try
                        {
-                         git 'https://github.com/intelliqittrainings/FunctionalTesting.git'
-                         sh 'java -jar /home/ubuntu/.jenkins/workspace/DeclarativePipelineautomationmail/testing.jar'
+                         git 'https://github.com/Hari2658/HariTestingcode.git'
+                         sh 'java -jar /home/ubuntu/.jenkins/workspace/automachine/testing.jar'
                        }
                          catch(Exception e4)
                             {
@@ -97,6 +96,4 @@ pipeline
             }
         }
     }
-}    
-
-
+}
